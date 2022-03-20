@@ -1,0 +1,38 @@
+<div class="login_container">
+    <div class="pt-5 text-center">
+        <h5>SignUp</h5>
+        <p>Register a New User</p>
+    </div>
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <div class="txt-field user_field">
+            <input type="name" name="name" required />
+            <label>Name*</label>
+        </div>
+        <div class="txt-field">
+            <input type="Number" name="contact_number" required />
+            <label>Email Address*</label>
+        </div>
+        <div class="txt-field">
+            <input type="Number" name="cod_number" required />
+            <label>Password*</label>
+        </div>
+        <div class="txt-field">
+            <input type="number" name="price" required />
+            <label>Confirm Password*</label>
+        </div>
+        <div class="box">
+            <button class="btn btn-danger" type="submit">Save Data</button>
+        </div>
+    </form>
+    <div class="author text-center">
+        <form action=""></form>
+        <h7>Already Signed Up?</h7>
+        <a href="{% url 'login' %}">login</a>
+    </div>
+</div>
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %} {{form.as_p}}
+    <input type="submit" name="register_user" />
+</form>

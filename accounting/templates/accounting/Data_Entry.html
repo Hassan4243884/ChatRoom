@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="Data_Entry.css">
+    <title>Muhamamd Hassan</title>
+</head>
+
+<body>
+    <div class="login_container">
+        <a class="home_link" href="#">←</a>
+        <div class=" pt-5 text-center">
+            <h5>Accounting Software</h5>
+            <p>New Parcel Entry</p>
+
+        </div>
+        <form>
+            <div class="txt-field user_field">
+                <input type="name" name="name" required>
+                <label>Name*</label>
+            </div>
+            <div class="txt-field">
+                <input type="Number" name="contact_number" required>
+                <label>Contact Number*</label>
+            </div>
+            <div class="txt-field">
+                <input type="Number" name="cod_number" required>
+                <label>CN Number*</label>
+            </div>
+            <div class="txt-field">
+                <input type="number" name="price" required>
+                <label>Price*</label>
+            </div>
+            <div class="box">
+                <button class="btn btn-danger" type="submit">Save Data</button>
+            </div>
+        </form>
+        <div class="date text-end">
+            <p id="today_date">27-10-2021</p>
+        </div>
+    </div>
+    <div class="author my-3 text-center">
+        <h7>Muhammad Hassan</h7>
+        <p class="contact_number">0341-4243884</p>
+    </div>
+
+
+    <script>
+        var today = new Date();
+        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        document.getElementById("today_date").innerHTML = date;
+    </script>
+    <script src="Data_Entry.js"></script>
+</body>
+
+</html>
